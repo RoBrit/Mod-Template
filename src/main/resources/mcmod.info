@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "ModTemplate",
+    "name": "Mod Template",
+    "version": "${version}",
+    "mcversion": "${mc_version}",
+    "description": "A basic template mod, used for the basis of other mods",
+    "credits": "",
+    "url": "www.robrit.com",
+    "updateUrl": "",
+    "authorList": ["TheRoBrit"],
+    "logoFile": "",
+    "screenshots": [],
+    "parent":"",
+    "dependencies": ["mod_MinecraftForge"]
+  }
+]
