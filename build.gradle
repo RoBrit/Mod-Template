@@ -24,7 +24,6 @@ version = "${minecraft_version}-${mod_version}" // Mod Version
 
 minecraft {
     version = "${minecraft_version}-${forge_version}"
-    assetDir = "eclipse/assets"
     runDir = 'run'
 
     replace "@VERSION@", project.version
