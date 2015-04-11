@@ -33,10 +33,6 @@ minecraft {
 
 repositories {
     mavenCentral()
-    maven {
-        name 'CB Repo'
-        url = "http://chickenbones.net/maven/"
-    }
 }
 
 sourceSets {
