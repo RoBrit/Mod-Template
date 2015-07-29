@@ -1,6 +1,14 @@
+apply plugin: 'forge'
+apply plugin: 'maven-publish'
+
+apply from: 'gradle/scripts/dependencies.gradle'
+apply from: 'gradle/scripts/builds.gradle'
+
 buildscript {
     repositories {
+        mavenLocal()
         mavenCentral()
+
         maven {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
@@ -15,9 +23,6 @@ buildscript {
     }
 }
 
-apply plugin: 'forge'
-apply plugin: 'maven-publish'
-
 archivesBaseName = "ModTemplate" // Mod ID
 group = "com.robrit.modtemplate" // Mod Package
 version = "${minecraft_version}-${mod_version}" // Mod Version
@@ -30,10 +35,6 @@ minecraft {
     replaceIn "ModInformation.java"
 }
 
-repositories {
-    mavenCentral()
-}
-
 sourceSets {
     main {
         java {
@@ -43,10 +44,6 @@ sourceSets {
             srcDir 'src/main/resources'
         }
     }
-}
-
-dependencies {
-    // Add required build dependencies here
 }
 
 processResources {
